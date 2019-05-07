@@ -1,0 +1,28 @@
+#pagehelper\u5206\u9875\u63D2\u4EF6\u914D\u7F6E
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+  offset-as-page-num: true
+  row-bounds-with-count: true
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vhr
+    username: xxxx
+    password: xxxxxx
+  thymeleaf:
+    cache: false
+    suffix: .html
+    enable: true
+    encoding: utf-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    servlet:
+      content-type: text/html
+    check-template-location: true
+    check-template: true
+mybatis:
+  type-aliases-package: com.pagehelper.www.pagehelper.dao
+  mapper-locations: mappers/*.xml
